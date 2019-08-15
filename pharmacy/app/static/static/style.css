@@ -1,0 +1,24 @@
+img{
+margin-left:50px;
+}
+h1 {
+    font-family: 'Lobster';
+    margin-top:100px;
+}
+h3{
+    font-family: 'Lobster';
+    margin-top:50px;
+}
+
+
+#naziv{
+    font-family: 'Cursive';
+    font-weight:bold;
+}
+#popust{
+    color:red;
+    font-weight:bold;
+}
+#cijena,#recept{
+    font-family:'Times New Roman'
+}

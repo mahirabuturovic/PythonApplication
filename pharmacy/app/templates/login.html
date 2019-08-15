@@ -1,0 +1,40 @@
+<!doctype html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'static/home.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <!--form start-->
+                <form class="form-container" action="http://127.0.0.1:8000/pretraga/">
+                  <div class="form-group">
+                    <label for="inputUser">Korisničko ime</label>
+                    <input type="text" class="form-control" id="inputUser" placeholder="Unesite korisničko ime">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPass">Password</label>
+                    <input type="password" class="form-control" id="inputPass" placeholder="Unesite password">
+                  </div>
+                  <button type="submit" class="btn btn-primary" >Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        </div>
+
+</body>
+<style>
+      body{
+        background:url("https://image.freepik.com/foto-gratis/paquete-ampolla-usado-pastillas-sobre-fondo-blanco-rosado_23-2147827535.jpg");
+        background-size: 100%;
+        background-position: center;
+    }
+</style>

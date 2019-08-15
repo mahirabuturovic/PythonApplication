@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" action="/kreiraj-clanak/">
+    {% csrf_token %}
+    {% for field in forma %}
+    <p>
+        {{ field.label_tag }}<br>
+        {{field}}
+    </p>
+    {% endfor %}
+
+  <input type="submit" class="btn btn-primary" value="Dodaj na blog">
+</form>
+{% endblock content %}

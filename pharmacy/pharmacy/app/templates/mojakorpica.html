@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h3>Ovo je Vaša korpica:</h3>
+<div class="row">
+{% for i in items %}
+<img src="{{i.lijek.slika.url}}">
+<form method="post" action="/obrisi/{{i.lijek.slug}}/">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="Ukloni" >
+
+</form>
+{% endfor %}</div>
+<p></p>
+<p><b>UKUPNO: {{suma}}</b></p>
+<p><button type="button" class="btn btn-primary">Kupujem!</button>
+</p>
+{% endblock content %}

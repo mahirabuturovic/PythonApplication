@@ -1,0 +1,11 @@
+
+Posjetite našu stranicu online apoteka i ostvarite popust na neki od slijedećih proizvoda:
+{% for sl in snizeni_lijekovi %}
+NAZIV LIJEKA-{{sl.lijek.naziv}}
+STARA CIJENA-{{sl.lijek.cijena}}
+POPUST- {{sl.iznos}}%
+
+{% endfor %}
+
+
+

@@ -1,0 +1,57 @@
+{% load static %}
+<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'static/home.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h3>Dobrodošli na online apoteku!</h3>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+  <form method="post" class="form-container">
+    {% csrf_token %}
+    <div class="form-group">
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+      </p>
+    {% endfor %}
+       </div>
+        <div class="form-group">
+      {% for field in profile_form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Registruj se</button>
+          <a href="{% url 'login' %}">Imate račun? Prijavite se</a>
+        </div>
+  </form>
+    </div>
+    </div>
+</div>
+</body>
+<style>
+      body{
+        background:url("https://image.freepik.com/foto-gratis/paquete-ampolla-usado-pastillas-sobre-fondo-blanco-rosado_23-2147827535.jpg");
+        background-size: 100%;
+        background-position: center;
+    }
+</style>

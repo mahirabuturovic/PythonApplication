@@ -1,0 +1,18 @@
+{% load static %}
+<head>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/static/style.css">
+</head>
+
+
+{% include "navbar.html" %}
+
+<html>
+{% for clanak in blog %}
+<div id="clanak">
+    <a href="{{clanak.slug}}/"><h1>{{clanak.naslov}}</h1></a>
+<p>{{clanak.datum}}</p>
+{% endfor %}
+</div>
+</html>
