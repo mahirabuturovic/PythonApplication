@@ -36,6 +36,7 @@ class RealSubject(Subject):
                    return True
 
                 else:
+                   narudzba.lijekovi.add(narudzba_lijek)
                    return True
             else:
                ordered_date = timezone.now()
