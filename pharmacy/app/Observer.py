@@ -42,7 +42,6 @@ class ConcreteObserver(ObserverSubscriber):
 
     def __init__(self, publisher, user):
         self.publisher = publisher
-        self.publisher.attach(self)
         self.user=user
 
     def setMail(self,mail):
